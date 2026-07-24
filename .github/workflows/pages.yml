@@ -1,19 +1,15 @@
 name: Deploy GitHub Pages
-
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 concurrency:
   group: pages
   cancel-in-progress: true
-
 jobs:
   deploy:
     environment:
@@ -23,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Unpack site
-        run: mkdir site && unzip -q residence-concierge-site-v2.zip -d site
+        run: mkdir site && unzip -q residence-concierge-site-v3.zip -d site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
