@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Unpack site
-        run: mkdir site && unzip -q residence-concierge-site-v10.zip -d site
+        run: mkdir site && unzip -q residence-concierge-site-v11.zip -d site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
